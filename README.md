@@ -158,7 +158,7 @@ In `lib/advanced_jukebox.rb` you'll be building on your jukebox so that it allow
 
 In `lib/advanced_jukebox.rb` you'll see a `my_songs` hash which has keys of song names and values of the path to of each mp3 file (in `jukebox-cli/audio/Emerald-Park/<file name>.mp3`). 
 
-Change the value of each hash key so reflect the correct file path. For example, if this jukebox-cli directory is in `Users/<your name>/Desktop/Dev/`, the value of the first key should be `Users/<your name>/Desktop/Dev/jukebox-cli/audio/Emerald-Park/01.mp3`. If you're not sure what the path to the file is, cd into the directory of this lab in your terminal and type `pwd`. This stands for "print working directory" and will return the path to your current location. 
+Change the value of each hash key to reflect the correct file path. For example, if this jukebox-cli directory is in `Users/<your name>/Desktop/Dev/`, the value of the first key should be `Users/<your name>/Desktop/Dev/jukebox-cli/audio/Emerald-Park/01.mp3`. If you're not sure what the path to the file is, cd into the directory of this lab in your terminal and type `pwd`. This stands for "print working directory" and will return the path to your current location. 
 
 ### How can a Ruby program play music?
 
@@ -175,6 +175,8 @@ This is the code that you'll be adding to your `play` method in order to play th
 Check out the code in `advanced_jukebox.rb`, we've left the method definitions for you and provided you the song hash, `my_songs`. 
 
 Follow the instructions in the comments of `advanced_jukebox.rb` to get your
-jukebox working. This is a bonus challenge, so there are not tests. Just get your jukebox playing music. 
+jukebox working. This is a bonus challenge, so there are no tests. Just get your jukebox playing music. 
+
+**Hint:** You can open a file from the command line by typing `open <filename>` in your terminal. (If you are not using a Mac, the command you type will be a little [different](http://stackoverflow.com/questions/6657777/open-text-file-and-program-shortcut-in-windows-batch-file). If the file is an audio file, you computer will open the file and play it. We want our Ruby Jukebox program to execute that command for us. Ruby has method, `system`, that is called with an argument of a string that contains the command line command you want to execute. When Ruby invokes that method, the command you placed in the string will be executed. So, to play a song from a Ruby file, you can use `system "open #{filename}"`. 
 
 **Run your advanced jukebox program by typing `ruby bin/advanced_jukebox` in your terminal. This is the runner file for the `advanced_jukebox.rb` code.**
